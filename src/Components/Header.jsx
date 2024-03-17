@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import { div, div } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { aboutComponent } from "./About";
 
 export const Header = () => {
   return (
@@ -10,12 +11,12 @@ export const Header = () => {
             MyPortfolio
           </div>
           <div className="lg:order-2">
-            <div
-              to="#"
+            <Link
+              to="https://github.com/jatin34090"
               className="border-2 cursor-pointer hover:bg-sky-400 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py:2.5 mr-2 "
             >
               Github
-            </div>
+            </Link>
           </div>
           <div className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -23,6 +24,7 @@ export const Header = () => {
                 <div
                   to="/about"
                   className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
+                  onClick={aboutComponent}
                 >
                   About
                 </div>
@@ -32,7 +34,7 @@ export const Header = () => {
                   to="/contact"
                   className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
                 >
-                  Contact
+                  Skills
                 </div>
               </li>
               <li>
@@ -40,7 +42,7 @@ export const Header = () => {
                   to="/education"
                   className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
                 >
-                  Education
+                  Contact
                 </div>
               </li>
             </ul>

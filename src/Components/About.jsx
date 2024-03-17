@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { SiExpress, SiPostman } from "react-icons/si";
 import {
   DiCss3Full,
@@ -9,15 +9,20 @@ import {
   DiNodejsSmall,
   DiReact,
 } from "react-icons/di";
+const aboutComponent = ()=>{
+  aboutRef.current.scrollIntoView({behavior: "smooth",})
+ }
+ let aboutRef = "";
 const About = () => {
+  aboutRef= useRef(null);
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div ref={aboutRef} className="flex flex-col justify-center items-center">
       <div className="w-2/5 text-center">
-        <div className=" ml-10 text-2xl ">About Me</div>
+        <div className=" ml-10 mt-8 text-3xl ">About Me</div>
         <div className="ml-10 text-3xl text-sky-400 ">WHO AM I?</div>
-        <dir className=" text-center mt-4 text-white ml-10">
+        <div className=" text-center mt-4 text-white ml-10">
         <strong className="text-3xl">Hi, I'm Jatin. Nice to meet you.</strong>
-        </dir>
+        </div>
         <div className=" text-center mt-4 text-gray-400 ml-10">
           I’m currently pursuing a degree in{" "}
           <strong className="text-white">Computer Science.</strong> I have a
@@ -30,7 +35,7 @@ const About = () => {
         </div>
       </div>
       <div className="text-2xl mt-8 flex flex-col items-center ">
-        <div> Skills</div>
+        <div className="text-3xl mb-4"> Skills</div>
         <div className="flex justify-center items-center py-5  ">
           <div className="text-center ">
             <DiHtml5
@@ -138,3 +143,5 @@ const About = () => {
 };
 
 export default About;
+export {aboutComponent}
+
