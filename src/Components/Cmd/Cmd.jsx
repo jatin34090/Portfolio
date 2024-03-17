@@ -89,9 +89,9 @@ let arrowInput = arrow + inputValue;
       <div
         ref={themeRef}
         onClick={handleDivClick}
-        className={` h-3/4 w-2/4 border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)] ${theme === "dark"?"bg-black text-white" : "bg-neutral-300 text-black" } `}
+        className={` h-3/4 w-2/4 border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]  ${theme === "dark"?"bg-black text-white" : "bg-neutral-300 text-black" } `}
       >
-        <div className="flex fixed top-0 w-full ">
+        <div className="flex w-full ">
           <div className="w-4 h-4   bg-red-700 rounded-full mt-2 mx-1" />
           <div className="w-4 h-4 bg-yellow-400 rounded-full mt-2 mx-1" />
           <div className="w-4 h-4 bg-green-700 rounded-full mt-2 mx-1" />
@@ -99,7 +99,7 @@ let arrowInput = arrow + inputValue;
         <div
           style={{ overflow: "auto", width: "calc(100% - 0.5rem)" }}
           ref={inputRef}
-          className="h-5/6 mt-2 ml-2 absolute top-6 font-mono text-lg"
+          className="h-5/6 mt-2 ml-2 font-mono text-lg"
         >
           <div id="cmd-container">
             <span className="p-1"> Get started by typing `help` command</span>
@@ -123,13 +123,12 @@ let arrowInput = arrow + inputValue;
                 <span ref={cursorRef}>{arrow}{inputValue}</span>
 
                 {cursor && (
-                  <div className=" absolute inline-block bg-gray-500 animate-blink h-3 w-2 py-3"></div>
+                  <span className="inline-block bg-gray-500 animate-blink w-2"> </span>
                 )}
               </span>
             </div>
           </div>
         </div>
-      </div>
       <input
         ref={focusRef}
         type="text"
@@ -140,6 +139,7 @@ let arrowInput = arrow + inputValue;
         onKeyDown={handlekeySubmit}
       />
     </div>
+      </div>
   );
 };
 
