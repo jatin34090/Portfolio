@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { aboutComponent } from "./About";
 
 export const Header = () => {
   return (
@@ -24,7 +23,6 @@ export const Header = () => {
                 <div
                   to="/about"
                   className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
-                  onClick={aboutComponent}
                 >
                   About
                 </div>

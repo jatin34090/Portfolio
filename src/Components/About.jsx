@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { SiExpress, SiPostman } from "react-icons/si";
 import {
   DiCss3Full,
@@ -9,19 +8,15 @@ import {
   DiNodejsSmall,
   DiReact,
 } from "react-icons/di";
-const aboutComponent = ()=>{
-  aboutRef.current.scrollIntoView({behavior: "smooth",})
- }
- let aboutRef = "";
+
 const About = () => {
-  aboutRef= useRef(null);
   return (
-    <div ref={aboutRef} className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mb-20">
       <div className="w-2/5 text-center">
         <div className=" ml-10 mt-8 text-3xl ">About Me</div>
         <div className="ml-10 text-3xl text-sky-400 ">WHO AM I?</div>
         <div className=" text-center mt-4 text-white ml-10">
-        <strong className="text-3xl">Hi, I'm Jatin. Nice to meet you.</strong>
+          <strong className="text-3xl">Hi, I'm Jatin. Nice to meet you.</strong>
         </div>
         <div className=" text-center mt-4 text-gray-400 ml-10">
           I’m currently pursuing a degree in{" "}
@@ -143,5 +138,3 @@ const About = () => {
 };
 
 export default About;
-export {aboutComponent}
-

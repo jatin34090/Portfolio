@@ -1,5 +1,7 @@
 import React from "react";
 import { SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
+import { Link } from "react-router-dom";
+
 
 const Contact = () => {
   return (
@@ -44,28 +46,28 @@ const Contact = () => {
         </div>
       </div>
       <div className="text-center m-8 text-3xl">Contect me on Social media</div>
-      <div className="flex justify-center">
-        <div className="">
+      <div className="flex justify-center gap-5 m-8">
+        <Link to="https://linkedin.com/in/jatingupta10008" >
           <SiLinkedin size={50} className="m-auto rounded-lg size-12 duration-700 hover:size-16"  style={{
                 color: "rgb(56 189 248",
                 boxShadow: "0 0px 35px rgba(255, 255, 255, 0.5)",
               }} />
           <span>Linkedin</span>
-        </div>
-        <div className="w-28 h-24">
+        </Link>
+        <Link to="" >
         <SiInstagram className="m-auto rounded-lg size-12 duration-700 hover:size-16" style={{
                 color: "rgb(56 189 248",
                 boxShadow: "0 0px 35px rgba(255, 255, 255, 0.5)",
               }}/>
         <span>Instagram</span>
-        </div>
-        <div>
+        </Link>
+        <Link to="https://twitter.com/jatinguptaa08">
         <SiTwitter  size={50} className="m-auto rounded-lg size-12 duration-700 hover:size-16"  style={{
                 color: "rgb(56 189 248",
                 boxShadow: "0 0px 35px rgba(255, 255, 255, 0.5)",
               }}/>
         <span>Twitter</span>
-        </div>
+        </Link>
       </div>
     </div>
   );
