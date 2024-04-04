@@ -1,0 +1,7 @@
+const express = require("express");
+const router = express.Router();
+router.post("/portfolio", (req, res) => {
+    console.log(req.body)
+    res.json({success: true})
+})
+module.exports = router;

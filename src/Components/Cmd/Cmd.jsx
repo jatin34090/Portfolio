@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import list from "./data.json"
+import list from "./data.json";
 
 const Cmd = () => {
   const [cursor, setCursor] = useState(false);
@@ -19,25 +19,25 @@ const Cmd = () => {
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  
+
   useEffect(() => {
     if (spanRef.current && inputRef.current) {
       const spanHeight = spanRef.current.offsetHeight;
       inputRef.current.scrollTop = spanHeight;
     }
   }, [inputValue]);
-  
+
   const handleClickOutside = (e) => {
     if (inputRef.current && !inputRef.current.contains(e.target)) {
       setCursor(false);
     }
   };
-  
+
   const onChangeInput = (e) => {
     let value = e.target.value;
     setInputValue(value);
   };
-  
+
   const commandResult = (data) => {
     if (data === "clear") {
       setCommendList([]);
@@ -49,26 +49,24 @@ const Cmd = () => {
     } else {
       value = list[data];
     }
-let arrowInput = arrow + inputValue;
+    let arrowInput = arrow + inputValue;
     setCommendList((prevCommentList) => [
       ...prevCommentList,
       arrowInput,
       value,
     ]);
-  
-    
+
     if (data === "setdark") {
       setTheme("dark");
     } else if (data === "setlight") {
       setTheme("light");
-
     }
 
     if (data === "github" || data === "linkedin" || data === "twitter") {
       window.open(value, `_blank`).focus();
     }
   };
-  
+
   const handlekeySubmit = (e) => {
     if (e.key === "Enter") {
       let word = inputValue.split(" ");
@@ -78,7 +76,7 @@ let arrowInput = arrow + inputValue;
       setInputValue("");
     }
   };
-  
+
   const handleDivClick = () => {
     setCursor(true);
     focusRef.current.focus();
@@ -89,7 +87,9 @@ let arrowInput = arrow + inputValue;
       <div
         ref={themeRef}
         onClick={handleDivClick}
-        className={` h-3/4 w-2/4 border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]  ${theme === "dark"?"bg-black text-white" : "bg-neutral-300 text-black" } `}
+        className={` h-3/4 w-2/4 border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]  ${
+          theme === "dark" ? "bg-black text-white" : "bg-neutral-300 text-black"
+        } `}
       >
         <div className="flex w-full ">
           <div className="w-4 h-4   bg-red-700 rounded-full mt-2 mx-1" />
@@ -120,34 +120,31 @@ let arrowInput = arrow + inputValue;
                       <br />
                     </span>
                   ))}
-                <span ref={cursorRef}>{arrow}{inputValue}</span>
+                <span ref={cursorRef}>
+                  {arrow}
+                  {inputValue}
+                </span>
 
                 {cursor && (
-                  <span className="inline-block bg-gray-500 animate-blink w-2"> </span>
+                  <span className=" inline bg-gray-500 animate-blink w-2">
+                    {" "}
+                  </span>
                 )}
               </span>
             </div>
           </div>
         </div>
-      <input
-        ref={focusRef}
-        type="text"
-        className="ml-1 bg-white outline-none border-none no-underline opacity-0 w-0 h-0"
-        onChange={onChangeInput}
-        value={inputValue}
-
-        onKeyDown={handlekeySubmit}
-      />
-    </div>
+        <input
+          ref={focusRef}
+          type="text"
+          className="ml-1 bg-white outline-none border-none no-underline opacity-0 w-0 h-0"
+          onChange={onChangeInput}
+          value={inputValue}
+          onKeyDown={handlekeySubmit}
+        />
       </div>
+    </div>
   );
 };
 
 export default Cmd;
-
-
-
-
-
-
-

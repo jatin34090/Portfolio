@@ -3,7 +3,7 @@ import EducationCard from "./EducationCard";
 
 const Education = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div id="education" className="flex flex-col justify-center items-center">
       <h1 className="text-3xl mb-8">Education</h1>
       <div className="mb-20 flex flex-row ">
         <div className="ml-28 flex flex-col items-center justify-center">

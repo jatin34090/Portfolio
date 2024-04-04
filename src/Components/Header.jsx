@@ -1,48 +1,139 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export const Header = () => {
   return (
     <header className=" sticky z-50 top-0 bg-slate-900">
       <nav className="px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <div to="/" className="cursor-pointer flex items-center text-2xl text-sky-400">
-            MyPortfolio
+          <div className="cursor-pointer flex items-center text-2xl text-sky-400">
+            <ScrollLink
+              activeClass="active"
+              to="root"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              MyPortfolio
+            </ScrollLink>
           </div>
           <div className="lg:order-2">
-            <Link
-              to="https://github.com/jatin34090"
-              className="border-2 cursor-pointer hover:bg-sky-400 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py:2.5 mr-2 "
-            >
-              Github
+            <Link to="https://github.com/jatin34090">
+              <Button text={"Github"} className={" hover:bg-sky-400 "} />
             </Link>
           </div>
           <div className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <div
-                  to="/about"
-                  className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
+                <ScrollLink
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
                 >
-                  About
-                </div>
+                  <Button
+                    text={"About"}
+                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  />
+                </ScrollLink>
               </li>
               <li>
-                <div
-                  to="/contact"
-                  className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
+                <ScrollLink
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
                 >
-                  Skills
-                </div>
+                  <Button
+                    text={"Skills"}
+                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  />
+                </ScrollLink>
               </li>
               <li>
-                <div
-                  to="/education"
-                  className="pr-4 pl-3 cursor-pointer duration-200 bg-transparent hover:text-sky-400"
+                <ScrollLink
+                  activeClass="active"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
                 >
-                  Contact
-                </div>
+                  <Button
+                    text={"Project"}
+                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  />
+                </ScrollLink>
               </li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="education"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button
+                    text={"Eduction"}
+                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  />
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button
+                    text={"Contact"}
+                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  />
+                </ScrollLink>
+              </li>
+              {/* <li>
+                <Button
+                  text={"Skills"}
+                  className={
+                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  }
+                />
+              </li>
+              <li>
+                <Button
+                  text={"Project"}
+                  className={
+                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  }
+                />
+              </li>
+              <li>
+                <Button
+                  text={"Education"}
+                  className={
+                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  }
+                />
+              </li>
+              <li>
+                <Button
+                  text={"Contact"}
+                  className={
+                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                  }
+                />
+              </li> */}
             </ul>
           </div>
         </div>
