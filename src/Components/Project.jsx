@@ -13,7 +13,7 @@ const Project = () => {
           title="Social Book"
           description="Developed a full-stack social media platform using the MERN stack. Implemented user authentication and authorization using JWT (JSON Web Tokens). Enabled users to create accounts, post videos and images, and interact with each other through likes, comments, and follows. Implemented password reset functionality with Nodemailer for sending email notifications to users. Integrated Cloudinary for efficient uploading, storage, and management of photos and videos.
 "
-          image="src\Photos\socialBook.png"
+          image="src\assets\socialBook.png"
           githubLink="https://github.com/jatin34090/Updated-News-React"
           liveLink="https://jat-social-book.netlify.app"
           technology={["Javascript", "React", "Bootstrap"]}
@@ -24,7 +24,7 @@ const Project = () => {
   Accurate forecasts for any location worldwide.
   Customizable preferences for personalized    weather experience
 "
-          image="src\Photos\weatherApp.png"
+          image="src\assets\weatherApp.png"
           githubLink="https://github.com/jatin34090/Weather-APP"
           liveLink="https://weatherapp-jat.netlify.app/"
           technology={["Javascript", "HTML", "CSS"]}
@@ -33,7 +33,7 @@ const Project = () => {
         <ProjectCardRight
           title="Admin-Dashboard"
           description="Developed a modern Admin Dashboard web application using React framework and Vite for efficient development. Implemented various charts to visualize data analytics and improve data representation. Responsive design for seamless viewing across devices."
-          image="src\Photos\Admin-dashboard.png"
+          image="src\assets\Admin-dashboard.png"
           githubLink="https://github.com/jatin34090/jatin34090-AdiminDashboard"
           liveLink="https://admindashboard-jat.netlify.app/admin/dashboard"
           technology={["React", "Tailwind", "Vite", "Chart.js"]}
@@ -42,7 +42,7 @@ const Project = () => {
           title="News App"
           description="Users can filter news articles based on categories such as business, entertainment, health, science, sports, and technology.
 By utilizing the NewsAPI, the application fetches the latest news articles in real-time, ensuring users have access to the most current information. Users can click on a news article to read more details, including the full article on the source's website."
-          image="src\Photos\newsApp.png"
+          image="src\assets\newsApp.png"
           githubLink="https://github.com/jatin34090/Updated-News-React"
           liveLink=""
           technology={["Javascript", "React", "Bootstrap"]}

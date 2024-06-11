@@ -11,9 +11,9 @@ const Education = () => {
           <div className="bg-sky-500 h-full w-1 "></div>
         </div>
        <div>
-       <EducationCard image="src\Photos\collegeLogo.jpg" college="Teerthanker Mahaveer University" location="Moradabad, Uttar Pradesh, India" course="Bachelor of Technology (B.Tech) in Computer Science" duration="2020 - 2024" />
-       <EducationCard image="src\Photos\schoolLogo.png" college="Maharaja Agarsen Public School" location="Moradabad, Uttar Pradesh, India" course="12th" duration="2019-2020" />
-       <EducationCard image="src\Photos\schoolLogo.png" college="Maharaja Agarsen Public School" location="Moradabad, Uttar Pradesh, India" course="10th" duration="2017-2018" />
+       <EducationCard image="src\assets\collegeLogo.jpg" college="Teerthanker Mahaveer University" location="Moradabad, Uttar Pradesh, India" course="Bachelor of Technology (B.Tech) in Computer Science" duration="2020 - 2024" />
+       <EducationCard image="src\assets\schoolLogo.png" college="Maharaja Agarsen Public School" location="Moradabad, Uttar Pradesh, India" course="12th" duration="2019-2020" />
+       <EducationCard image="src\assets\schoolLogo.png" college="Maharaja Agarsen Public School" location="Moradabad, Uttar Pradesh, India" course="10th" duration="2017-2018" />
        </div>
       </div>
     </div>
