@@ -2,7 +2,7 @@
     "help": "whoami: Check my name \nskills: Check my Skills \ngithub: Check my Github Profile \nlinkedin: Check my Linkedin Profile \ntwitter: Check my Twitter Profile \nclear: Clear screen \nsetlight: Set Light Theame\nsetdark: Set Dark Theame",
     "whoami": "I am Jatin Gupta",
     "skills":
-      "Programming Languages: Java,C++, CSS, HTML, JavaScript, SQL, CSS\nWeb Technologies: Node.js, React.js, Express.js, Bootstrap, REST APIs\nDatabases: MySQL, MongoDB, Firebase Realtime Database",
+      "Programming Languages: Java,C++, CSS, HTML, JavaScript, SQL,\nWeb Technologies: Node.js, React.js, Express.js, Bootstrap, REST APIs\nDatabases: MySQL, MongoDB, Firebase Realtime Database",
     "linkedin": "https://linkedin.com/in/jatingupta10008",
     "github": "https://github.com/jatin34090",
     "twitter": "https://twitter.com/jatinguptaa08",

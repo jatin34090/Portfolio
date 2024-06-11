@@ -30,6 +30,7 @@ const Contact = () => {
     }));
   };
 
+
   const submitHandler = async (e) => {
     e.preventDefault();
     let response = await fetch(`http://localhost:4000/api/v1/portfolio`, {
