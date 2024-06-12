@@ -39,7 +39,7 @@ const Project = () => {
           description="Developed a modern Admin Dashboard web application using React framework and Vite for efficient development. Implemented various charts to visualize data analytics and improve data representation. Responsive design for seamless viewing across devices."
           image={adminDashboard}
           githubLink="https://github.com/jatin34090/jatin34090-AdiminDashboard"
-          liveLink="https://admindashboard-jat.netlify.app/admin/dashboard"
+          liveLink="https://admindashboard-jat.netlify.app/"
           technology={["React", "Tailwind", "Vite", "Chart.js"]}
         />
         <ProjectCardLeft

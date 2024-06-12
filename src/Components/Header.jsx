@@ -21,8 +21,11 @@ export const Header = () => {
             </ScrollLink>
           </div>
           <div className="lg:order-2">
-            <Link to="https://github.com/jatin34090">
+            <Link to="https://github.com/jatin34090" target="_blank">
               <Button text={"Github"} className={" hover:bg-sky-400 "} />
+            </Link>
+            <Link to="https://tinyurl.com/resume-jatin" target="_blank" >
+              <Button text={"Resume"} className={" hover:bg-sky-400 "} />
             </Link>
           </div>
           <div className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1">

@@ -119,7 +119,7 @@ const Contact = () => {
       </div>
       <div className="text-center m-8 text-3xl">Contect me on Social Media</div>
       <div className="flex justify-center gap-5 m-8">
-        <Link to="https://linkedin.com/in/jatingupta10008">
+        <Link to="https://linkedin.com/in/jatingupta10008" target="_blank">
           <SiLinkedin
             size={50}
             className="m-auto rounded-lg size-12 duration-700 hover:size-16"
@@ -130,7 +130,7 @@ const Contact = () => {
           />
           <span>Linkedin</span>
         </Link>
-        <Link to="">
+        <Link to="https://www.instagram.com/jatin_guptaa08/" target="_blank">
           <SiInstagram
             className="m-auto rounded-lg size-12 duration-700 hover:size-16"
             style={{
@@ -140,7 +140,7 @@ const Contact = () => {
           />
           <span>Instagram</span>
         </Link>
-        <Link to="https://twitter.com/jatinguptaa08">
+        <Link to="https://twitter.com/jatinguptaa08" target="_blank">
           <SiTwitter
             size={50}
             className="m-auto rounded-lg size-12 duration-700 hover:size-16"
