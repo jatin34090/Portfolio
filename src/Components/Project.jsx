@@ -9,10 +9,11 @@ const Project = () => {
   return (
     <div
       id="project"
-      className="mb-20 flex flex-col items-center justify-center"
+      className=" flex flex-col items-center justify-center"
     >
       <h2 className="mb-8 text-3xl">Projects</h2>
       <div className="relative w-full mx-auto h-full max-w-full">
+      
       <ProjectCardRight
           title="Social Book"
           description="Developed a full-stack social media platform using the MERN stack. Implemented user authentication and authorization using JWT (JSON Web Tokens). Enabled users to create accounts, post videos and images, and interact with each other through likes, comments, and follows. Implemented password reset functionality with Nodemailer for sending email notifications to users. Integrated Cloudinary for efficient uploading, storage, and management of photos and videos.
@@ -22,17 +23,19 @@ const Project = () => {
           liveLink="https://jat-social-book.netlify.app"
           technology={["Javascript", "React", "Bootstrap"]}
         />
-        <ProjectCardLeft
+         <ProjectCardLeft
           title="Weather-APP"
           description="Real-time weather updates are at your fingertips.
-  Accurate forecasts for any location worldwide.
-  Customizable preferences for personalized    weather experience
-"
+          Accurate forecasts for any location worldwide.
+          Customizable preferences for personalized    weather experience
+          "
           image={weatherApp}
           githubLink="https://github.com/jatin34090/Weather-APP"
           liveLink="https://weatherapp-jat.netlify.app/"
+          
           technology={["Javascript", "HTML", "CSS"]}
         />
+        
 
         <ProjectCardRight
           title="Admin-Dashboard"

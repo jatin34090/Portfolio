@@ -4,7 +4,7 @@ import { SlCalender, SlLocationPin } from "react-icons/sl";
 
 const EducationCard = ({image, college, course, duration}) => {
   return (
-    <div className="flex flex-col ml-16 mb-10">
+    <div className="flex flex-col ml-5 md:ml-16 ">
     <div>
       <img className="w-8 h-6 bg-slate-900" src={image} alt="image" />
       <h4 className="text-xl ">{college}</h4>

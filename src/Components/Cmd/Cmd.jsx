@@ -87,7 +87,7 @@ const Cmd = () => {
       <div
         ref={themeRef}
         onClick={handleDivClick}
-        className={` h-3/4 w-2/4 border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]  ${
+        className={`w-full h-2/3 m-3 md:h-3/4 md:w-2/4  border-b-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)]  ${
           theme === "dark" ? "bg-black text-white" : "bg-neutral-300 text-black"
         } `}
       >

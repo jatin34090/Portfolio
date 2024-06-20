@@ -7,7 +7,6 @@ import Contact from "./Components/Contact";
 import Education from "./Components/Education";
 import { BrowserRouter } from "react-router-dom";
 import Project from "./Components/Project";
-import Alert from "./Components/Alert";
 
 function App() {
   return (

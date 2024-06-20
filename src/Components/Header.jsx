@@ -1,12 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(-50);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setOffset(-300);
+      } else {
+        setOffset(-50);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Call the function initially to set the offset based on initial window size
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <header className=" sticky z-50 top-0 bg-slate-900">
-      <nav className="px-6 py-2.5">
+    <header className="sticky top-0 z-50 bg-slate-900">
+      <nav className="px-7 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <div className="cursor-pointer flex items-center text-2xl text-sky-400">
             <ScrollLink
@@ -14,34 +40,61 @@ export const Header = () => {
               to="root"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={offset}
               duration={500}
             >
               MyPortfolio
             </ScrollLink>
           </div>
-          <div className="lg:order-2">
+          <div className="lg:order-2 flex items-center">
             <Link to="https://github.com/jatin34090" target="_blank">
-              <Button text={"Github"} className={" hover:bg-sky-400 "} />
+              <Button text={"Github"} className={"hover:bg-sky-400 ml-1"} />
             </Link>
-            <Link to="https://tinyurl.com/resume-jatin" target="_blank" >
-              <Button text={"Resume"} className={" hover:bg-sky-400 "} />
+            <Link to="https://tinyurl.com/resume-jatin" target="_blank">
+              <Button
+                text={"Resume"}
+                className={"hover:bg-sky-400 ml-1 mr-3"}
+              />
             </Link>
+            <button
+              className="lg:hidden absolute right-0 p-2 ml-2 text-sky-400"
+              onClick={toggleMenu}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+                ></path>
+              </svg>
+            </button>
           </div>
-          <div className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+          <div
+            className={`${
+              isOpen ? "block" : "hidden"
+            } lg:flex lg:items-center lg:w-auto lg:order-1 w-full`}
+          >
+            <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 w-full lg:w-auto">
               <li>
                 <ScrollLink
                   activeClass="active"
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-50}
+                  offset={offset}
                   duration={500}
                 >
                   <Button
+                    onClick={toggleMenu}
                     text={"About"}
-                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                    className="border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
                   />
                 </ScrollLink>
               </li>
@@ -51,12 +104,13 @@ export const Header = () => {
                   to="skills"
                   spy={true}
                   smooth={true}
-                  offset={-80}
+                  offset={offset}
                   duration={500}
                 >
                   <Button
+                    onClick={toggleMenu}
                     text={"Skills"}
-                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                    className="border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
                   />
                 </ScrollLink>
               </li>
@@ -66,12 +120,13 @@ export const Header = () => {
                   to="project"
                   spy={true}
                   smooth={true}
-                  offset={-80}
+                  offset={offset}
                   duration={500}
                 >
                   <Button
+                    onClick={toggleMenu}
                     text={"Project"}
-                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                    className="border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
                   />
                 </ScrollLink>
               </li>
@@ -81,12 +136,13 @@ export const Header = () => {
                   to="education"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={offset}
                   duration={500}
                 >
                   <Button
-                    text={"Eduction"}
-                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                    onClick={toggleMenu}
+                    text={"Education"}
+                    className="border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
                   />
                 </ScrollLink>
               </li>
@@ -96,47 +152,16 @@ export const Header = () => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={offset}
                   duration={500}
                 >
                   <Button
+                    onClick={toggleMenu}
                     text={"Contact"}
-                    className=" border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
+                    className="border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
                   />
                 </ScrollLink>
               </li>
-              {/* <li>
-                <Button
-                  text={"Skills"}
-                  className={
-                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
-                  }
-                />
-              </li>
-              <li>
-                <Button
-                  text={"Project"}
-                  className={
-                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
-                  }
-                />
-              </li>
-              <li>
-                <Button
-                  text={"Education"}
-                  className={
-                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
-                  }
-                />
-              </li>
-              <li>
-                <Button
-                  text={"Contact"}
-                  className={
-                    "border-none hover:bg-transparent text-base hover:text-sky-400 duration-200"
-                  }
-                />
-              </li> */}
             </ul>
           </div>
         </div>
