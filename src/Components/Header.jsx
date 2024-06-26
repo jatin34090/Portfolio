@@ -19,7 +19,7 @@ export const Header = () => {
         setOffset(-350);
       }
       else {
-        setOffset(-50);
+        setOffset(-70);
       }
     };
 

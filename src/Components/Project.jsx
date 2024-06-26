@@ -5,6 +5,7 @@ import socialBook from "../assets/socialBook.png";
 import weatherApp from "../assets/weatherApp.png";
 import newsApp from "../assets/newsApp.png";
 import adminDashboard from "../assets/adminDashboard.png";
+import teacherAllotmentSystem from "../assets/TeacherAllotmentSystem.png";
 const Project = () => {
   return (
     <div
@@ -13,7 +14,15 @@ const Project = () => {
     >
       <h2 className="mb-8 text-3xl">Projects</h2>
       <div className="relative w-full mx-auto h-full max-w-full">
-      
+      <ProjectCardLeft
+          title="Teacher-Allotment-System"
+          description="Automatically assigns teachers to classes based on availability, qualifications, and preferences. Identifies and resolves scheduling conflicts, ensuring a balanced distribution of workloads among teachers. Provides instant updates and notifications to teachers and administrators regarding schedule changes."
+          image={teacherAllotmentSystem}
+          githubLink="https://github.com/jatin34090/Teacher_Allotment_System_Frontend"
+          liveLink="https://teacher-allotment-system.netlify.app/"
+          
+          technology={["Javascript", "HTML", "CSS"]}
+        />
       <ProjectCardRight
           title="Social Book"
           description="Developed a full-stack social media platform using the MERN stack. Implemented user authentication and authorization using JWT (JSON Web Tokens). Enabled users to create accounts, post videos and images, and interact with each other through likes, comments, and follows. Implemented password reset functionality with Nodemailer for sending email notifications to users. Integrated Cloudinary for efficient uploading, storage, and management of photos and videos.
